@@ -613,6 +613,52 @@
         #uslugi li {
             overflow-wrap: anywhere;
         }
+
+        /* 1) Globalnie zapobiegamy „puchnięciu” elementów */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* 2) Formularz: niech pola trzymają 100% szerokości kontenera */
+        #kontakt input,
+        #kontakt select,
+        #kontakt textarea {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 3) Kontener formularza: twardszy limit + wyśrodkowanie */
+        #kontakt form {
+            width: min(100%, 560px);
+            /* było 700px – ciaśniej na telefonie */
+            margin-inline: auto;
+        }
+
+        /* 4) Karta formularza: mniejsze paddingi na małych ekranach */
+        @media (max-width: 600px) {
+            #kontakt .card {
+                padding: 16px;
+            }
+
+            #kontakt .field {
+                gap: 8px;
+            }
+
+            #kontakt label[for="consent"] {
+                line-height: 1.5;
+            }
+        }
+
+        #kontakt .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
     </style>
 
 </head>
