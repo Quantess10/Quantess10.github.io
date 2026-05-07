@@ -19,7 +19,7 @@ const defaultCategories = [
   },
   {
     name: "Część ciała",
-    words: ["Usta", "Kark", "Piersi", "Plecy", "Pośladki", "Pindol/Pindolinda", "Nogi"],
+    words: ["Usta", "Kark", "Piersi", "Plecy", "Pośladki", "Pindol/Pindolinda", "Dupka", "Nogi"],
   },
   {
     name: "Pozycja",
