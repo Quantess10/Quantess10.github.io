@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Losowanie kością</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      Prosta prywatna strona do losowania.
+      Logika działania znajduje się w pliku script.js.
+    -->
+    <main class="page-shell">
+      <!-- Ekran hasła jest widoczny jako pierwszy. Po poprawnym haśle JS pokazuje aplikację. -->
+      <section id="login-screen" class="login-screen" aria-labelledby="login-title">
+        <div class="login-panel">
+          <div class="dice-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <h1 id="login-title">Prywatne losowanie</h1>
+          <p>Podaj hasło, aby przejść do symulatora kości.</p>
+
+          <form id="login-form" class="login-form">
+            <label for="password-input">Hasło</label>
+            <div class="password-row">
+              <input id="password-input" type="password" autocomplete="current-password" />
+              <button type="submit">Wejdź</button>
+            </div>
+            <p id="password-error" class="form-error" role="alert"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Główna część strony. Atrybut hidden jest zdejmowany po wpisaniu hasła. -->
+      <section id="app-screen" class="app-screen" hidden>
+        <header class="app-header">
+          <div>
+            <p class="eyebrow">Symulator kości</p>
+            <h1>Losowanie z 4 kategorii</h1>
+          </div>
+          <button id="logout-button" class="secondary-button" type="button">Zablokuj</button>
+        </header>
+
+        <section class="roll-area" aria-live="polite">
+          <div class="dice-visual" aria-hidden="true">
+            <div id="dice-face" class="dice-face">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="roll-content">
+            <h2>Wynik losowania</h2>
+            <div id="result-list" class="result-list">
+              <p class="empty-result">Uzupełnij listy i kliknij „Losuj”.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Jedyny przycisk losujący na stronie. Losuje po jednym haśle z każdej uzupełnionej kategorii. -->
+        <button id="roll-button" class="roll-button" type="button">Losuj</button>
+
+        <!-- Kontener na 4 kategorie generowane w script.js z tablicy defaultCategories. -->
+        <section>
+          <div class="section-heading">
+            <h2>Kategorie i słowa</h2>
+            <p>Nazwa kategorii oraz słowa zapisują się w tej przeglądarce.</p>
+          </div>
+          <div id="categories" class="category-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
