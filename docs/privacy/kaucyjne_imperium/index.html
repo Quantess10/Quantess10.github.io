@@ -48,10 +48,12 @@
           <div>
             <dt>Platforma</dt>
             <dd>Android</dd>
+            <dd>iOS</dd>
           </div>
           <div>
             <dt>Identyfikator aplikacji</dt>
-            <dd><code>pl.kaucyjneimperium.kaucyjne_imperium</code></dd>
+            <dd>Android: <code>pl.kaucyjneimperium.kaucyjne_imperium</code></dd>
+            <dd>iOS: <code>pl.kaucyjneimperium.kaucyjneImperium</code></dd>
           </div>
         </dl>
       </header>
@@ -99,9 +101,11 @@
               takich jak nagroda za czas offline.
             </p>
             <p>
-              Dane te nie są przesyłane na serwer dewelopera. Można je usunąć,
-              czyszcząc dane aplikacji w ustawieniach Androida albo odinstalowując
-              grę.
+              Dane lokalne można usunąć, czyszcząc dane aplikacji w ustawieniach Androida
+              albo usuwając aplikację z urządzenia. Na iOS wybierz usunięcie aplikacji;
+              opcja odinstalowania aplikacji z zachowaniem dokumentów i danych nie usuwa
+              lokalnego zapisu gry. Kopie zapasowe systemu mogą podlegać osobnym ustawieniom
+              konta i urządzenia użytkownika.
             </p>
           </section>
 
@@ -109,13 +113,13 @@
             <p class="section-number">03</p>
             <h2>Opcjonalne reklamy i usługi Google</h2>
             <p>
-              Gra może oferować dobrowolne reklamy z nagrodą, na przykład
-              podwojenie nagrody offline. Do ich obsługi wykorzystuje
-              <strong>Google Mobile Ads SDK</strong> oraz
-              <strong>User Messaging Platform (UMP)</strong>. Obejrzenie reklamy
-              nie jest wymagane do zwykłego odebrania nagrody ani kontynuowania
-              gry.
-            </p>
+              Reklamy z nagrodą są dostępne na Androidzie i iOS. Na iOS aplikacja w obecnej
+              wersji nie prosi o uprawnienie App Tracking Transparency (ATT), dlatego
+              identyfikator reklamowy IDFA nie jest dostępny bez takiej autoryzacji.
+              Nie wyłącza to przetwarzania innych danych opisanych w tej polityce przez
+              SDK reklamowe. Formularze prywatności Google UMP zarządzają dostępnymi
+              wyborami użytkownika i nie zastępują systemowego uprawnienia ATT.
+                          </p>
             <p>
               Zgodnie z informacjami Google, Mobile Ads SDK może automatycznie
               zbierać lub udostępniać Google między innymi:
